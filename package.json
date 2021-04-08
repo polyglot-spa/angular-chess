@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:single-spa:angular-cw": "ng build angular-cw --prod --deploy-url http://localhost:5005/",
+    "serve:single-spa:angular-cw": "ng s --project angular-cw --disable-host-check --port 5005 --deploy-url http://localhost:5005/ --live-reload false"
   },
   "private": true,
   "dependencies": {
@@ -20,10 +22,13 @@
     "@angular/platform-browser-dynamic": "~11.2.9",
     "@angular/router": "~11.2.9",
     "rxjs": "~6.6.0",
+    "single-spa": ">=4.0.0",
+    "single-spa-angular": "^4.9.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
+    "@angular-builders/custom-webpack": "11.1.1",
     "@angular-devkit/build-angular": "~0.1102.8",
     "@angular/cli": "~11.2.8",
     "@angular/compiler-cli": "~11.2.9",
