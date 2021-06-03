@@ -1,16 +1,20 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { AngularChessHeaderComponent } from './components/angular-chess-header/angular-chess-header.component';
+import { ChessboardWrapperComponent } from './components/chessboard-wrapper/chessboard-wrapper.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AngularChessHeaderComponent,
+    ChessboardWrapperComponent,
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

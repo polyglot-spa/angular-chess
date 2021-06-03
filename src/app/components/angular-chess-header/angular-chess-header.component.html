@@ -1,0 +1,14 @@
+<header class="container-fluid" id="angular-secondary-header">
+  <div class="row p-2">
+    <div class="col-3">
+      <img class="w-100" alt="Angular logo" [src]="angularLogoUrl">
+    </div>
+    <div class="col-6 d-grid gap-2">
+      <button id="quickStartBtn" type="button" class="btn btn-light w-100 btn-sm" (click)="emitQuickStartGame()">Quick Start</button>
+      <button id="advancedConfigBtn" type="button" class="btn btn-light w-100 btn-sm" >Advanced Config</button>
+    </div>
+    <div class="col-3">
+      <img class="w-100" alt="Chess logo" [src]="chessLogoUrl">
+    </div>
+  </div>
+</header>
