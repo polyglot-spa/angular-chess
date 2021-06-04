@@ -5,7 +5,7 @@
     </div>
     <div class="col-6 d-grid gap-2">
       <button id="quickStartBtn" type="button" class="btn btn-light w-100 btn-sm" (click)="emitQuickStartGame()">Quick Start</button>
-      <button id="advancedConfigBtn" type="button" class="btn btn-light w-100 btn-sm" >Advanced Config</button>
+      <button id="advancedConfigBtn" type="button" class="btn btn-light w-100 btn-sm" (click)="openAdvancedConfigModal()">Advanced Config</button>
     </div>
     <div class="col-3">
       <img class="w-100" alt="Chess logo" [src]="chessLogoUrl">

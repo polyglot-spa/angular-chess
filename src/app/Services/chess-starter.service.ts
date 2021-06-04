@@ -6,4 +6,5 @@ import { Injectable, EventEmitter } from '@angular/core';
 export class ChessStarterService {
   constructor() { }
   quickStartGame = new EventEmitter();
+  advanceConfigStartGame = new EventEmitter();
 }

@@ -1,20 +1,20 @@
 // import { ComponentFixture, TestBed } from '@angular/core/testing';
 //
-// import { AngularChessHeaderComponent } from './angular-chess-header.component';
+// import { AdvancedConfigModalComponent } from './advanced-config-modal.component';
 //
-// describe('AngularChessHeaderComponent', () => {
-//   let component: AngularChessHeaderComponent;
-//   let fixture: ComponentFixture<AngularChessHeaderComponent>;
+// describe('AdvancedConfigModalComponent', () => {
+//   let component: AdvancedConfigModalComponent;
+//   let fixture: ComponentFixture<AdvancedConfigModalComponent>;
 //
 //   beforeEach(async () => {
 //     await TestBed.configureTestingModule({
-//       declarations: [ AngularChessHeaderComponent ]
+//       declarations: [ AdvancedConfigModalComponent ]
 //     })
 //     .compileComponents();
 //   });
 //
 //   beforeEach(() => {
-//     fixture = TestBed.createComponent(AngularChessHeaderComponent);
+//     fixture = TestBed.createComponent(AdvancedConfigModalComponent);
 //     component = fixture.componentInstance;
 //     fixture.detectChanges();
 //   });
