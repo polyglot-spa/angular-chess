@@ -1,4 +1,4 @@
-import 'zone.js/dist/zone.js'
+import 'zone.js/dist/zone.js';
 import { enableProdMode, NgZone } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { ɵAnimationEngine as AnimationEngine } from '@angular/animations/browser';

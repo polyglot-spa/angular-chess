@@ -1,5 +1,5 @@
 {
-  "name": "angular-cw",
+  "name": "angular-chess",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:single-spa:angular-cw": "ng build angular-cw --prod --deploy-url http://localhost:5005/",
-    "serve:single-spa:angular-cw": "ng s --project angular-cw --disable-host-check --port 5005 --deploy-url http://localhost:5005/ --live-reload false"
+    "build:single-spa:angular-chess": "ng build angular-chess --prod --deploy-url http://localhost:5005/",
+    "serve:single-spa:angular-chess": "ng s --project angular-chess --disable-host-check --port 5005 --deploy-url http://localhost:5005/ --live-reload false"
   },
   "private": true,
   "dependencies": {

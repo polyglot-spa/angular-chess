@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-cw": {
+    "angular-chess": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,13 +13,12 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/angular-cw",
+            "outputPath": "dist/angular-chess",
             "index": "src/index.html",
             "main": "src/main.single-spa.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "rebaseRootRelativeCssUrls": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -31,7 +30,7 @@
             "scripts": [],
             "customWebpackConfig": {
               "path": "extra-webpack.config.js",
-              "libraryName": "angular-cw",
+              "libraryName": "angular-chess",
               "libraryTarget": "umd"
             }
           },
@@ -68,18 +67,18 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "angular-cw:build"
+            "browserTarget": "angular-chess:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-cw:build:production"
+              "browserTarget": "angular-chess:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-cw:build"
+            "browserTarget": "angular-chess:build"
           }
         },
         "test": {
@@ -116,16 +115,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-cw:serve"
+            "devServerTarget": "angular-chess:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-cw:serve:production"
+              "devServerTarget": "angular-chess:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "angular-cw"
+  "defaultProject": "angular-chess"
 }

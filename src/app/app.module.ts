@@ -6,7 +6,7 @@ import { AngularChessHeaderComponent } from './components/angular-chess-header/a
 import { ChessboardWrapperComponent } from './components/chessboard-wrapper/chessboard-wrapper.component';
 import { AdvancedConfigModalComponent } from './components/advanced-config-modal/advanced-config-modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from "@angular/forms";
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
