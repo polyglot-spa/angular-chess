@@ -13,6 +13,8 @@ export class ChessboardWrapperComponent implements OnInit {
   constructor(private chessStarterService:ChessStarterService) { }
   game = new Chess();
   randomMoveInterval;
+  draggablePieces = false;
+  orientation = "white";
   addEventListeners(game) {
     this.chessboard.nativeElement.addEventListener('drag-start', (e) => {
       // eslint-disable-next-line no-unused-vars
@@ -71,7 +73,7 @@ export class ChessboardWrapperComponent implements OnInit {
   }
   ngOnInit() {
     this.chessStarterService.quickStartGame.subscribe(() => {
-      this.chessboard.nativeElement.setAttribute("draggable-pieces", "");
+      this.draggablePieces = true;
       this.addEventListeners(this.game);
       this.chessboard.nativeElement.start();
     })
@@ -85,16 +87,14 @@ export class ChessboardWrapperComponent implements OnInit {
       } else {
         this.chessboard.nativeElement.start();
       }
-      if (data.color === "Black") {
-        this.chessboard.nativeElement.setAttribute("orientation", "black");
-      }
+      this.orientation = data.color;
       if (data.selfPlay) {
         // @ts-ignore
         this.randomMoveInterval = window.setInterval(() => {
           this.makeRandomMove(this.game);
         }, 500);
       } else {
-        this.chessboard.nativeElement.setAttribute("draggable-pieces", "");
+        this.draggablePieces = true;
         this.addEventListeners(this.game);
         if (this.game.turn() === 'b') {
           // @ts-ignore

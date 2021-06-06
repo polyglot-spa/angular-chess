@@ -11,13 +11,16 @@ import { ModalService } from "../../Services/modal.service";
 export class AngularChessHeaderComponent {
   constructor(private chessStarterService:ChessStarterService, private modalCommunicator: ModalService) {
   }
+  disabled = false;
   angularLogoUrl = assetUrl('angular-logo.svg');
   chessLogoUrl = assetUrl('Centaur.png');
 
   emitQuickStartGame() {
     this.chessStarterService.quickStartGame.emit();
+    this.disabled = true;
   }
   openAdvancedConfigModal() {
     this.modalCommunicator.openAdvancedConfigModal.emit();
+    this.disabled = true;
   }
 }
