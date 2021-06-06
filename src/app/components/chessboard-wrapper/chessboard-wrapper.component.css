@@ -1,0 +1,9 @@
+
+#chessBoardBackground {
+  background-image: url("http://localhost:5005/assets/board-background.png");
+}
+
+#chessBoardAngular {
+  max-width: 900px;
+  margin: auto;
+}

@@ -10,7 +10,7 @@ import { ChessStarterService } from "../../Services/chess-starter.service";
 })
 export class AdvancedConfigModalComponent implements OnInit {
   fen = "";
-  color = "White";
+  color = "white";
   selfPlay = false;
 
   constructor( private modalService: NgbModal, private modalCommunicator: ModalService, private chessStarterService: ChessStarterService) { }
