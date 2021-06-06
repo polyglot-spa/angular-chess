@@ -1,9 +1,10 @@
 {
   "name": "angular-chess",
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "description": "The Angular micro-front end for Polyglot-Spa, the custom element chess-board is at its heart.",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run serve:single-spa:angular-chess",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -51,5 +52,10 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.1.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/polyglot-spa/angular-chess.git"
+  },
+  "keywords": ["angular", "custom elements", "micro-front end", "ng-bootstrap"]
 }
