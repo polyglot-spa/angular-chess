@@ -1,7 +1,7 @@
 import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
-import { ChessStarterService } from "../../Services/chess-starter.service";
+import { ChessStarterService } from '../../Services/chess-starter.service';
 import 'chessboard-element';
-import Chess from "chess.js";
+import Chess from 'chess.js';
 
 @Component({
   selector: 'app-chessboard-wrapper',
@@ -10,12 +10,12 @@ import Chess from "chess.js";
 })
 export class ChessboardWrapperComponent implements OnInit {
   @ViewChild('chessboard') chessboard: ElementRef;
-  constructor(private chessStarterService:ChessStarterService) { }
+  constructor(private chessStarterService: ChessStarterService) { }
   game = new Chess();
   randomMoveInterval;
   draggablePieces = false;
-  orientation = "white";
-  addEventListeners(game) {
+  orientation = 'white';
+  addEventListeners(game): void {
     this.chessboard.nativeElement.addEventListener('drag-start', (e) => {
       // eslint-disable-next-line no-unused-vars
       const {source, piece, position, orientation} = e.detail;
@@ -57,8 +57,8 @@ export class ChessboardWrapperComponent implements OnInit {
       this.chessboard.nativeElement.setPosition(this.game.fen());
     });
   }
-  makeRandomMove(game) {
-    let possibleMoves = game.moves();
+  makeRandomMove(game): void {
+    const possibleMoves = game.moves();
     // game over
     if (possibleMoves.length === 0) {
       // @ts-ignore
@@ -71,15 +71,15 @@ export class ChessboardWrapperComponent implements OnInit {
     this.game.move(possibleMoves[randomIdx]);
     this.chessboard.nativeElement.setPosition(this.game.fen());
   }
-  ngOnInit() {
+  ngOnInit(): void {
     this.chessStarterService.quickStartGame.subscribe(() => {
       this.draggablePieces = true;
       this.addEventListeners(this.game);
       this.chessboard.nativeElement.start();
-    })
+    });
     this.chessStarterService.advanceConfigStartGame.subscribe((data) => {
       const { validate_fen: validateFen } = this.game;
-      let result = validateFen(data.fen);
+      const result = validateFen(data.fen);
 
       if (data.fen && result.valid) {
         this.chessboard.nativeElement.setPosition(data.fen);
