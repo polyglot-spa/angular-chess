@@ -4,7 +4,6 @@ import { Injectable, EventEmitter } from '@angular/core';
   providedIn: 'root'
 })
 export class ModalService {
-
   constructor() { }
   openAdvancedConfigModal = new EventEmitter();
 }
