@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ChessStarterService } from '../../Services/chess-starter.service';
-import { assetUrl } from 'src/single-spa/asset-url';
+// import { assetUrl } from 'src/single-spa/asset-url';
 import { ModalService } from '../../Services/modal.service';
 
 @Component({
@@ -12,8 +12,8 @@ export class AngularChessHeaderComponent {
   constructor(private chessStarterService: ChessStarterService, private modalCommunicator: ModalService) {
   }
   disabled = false;
-  angularLogoUrl = assetUrl('angular-logo.svg');
-  chessLogoUrl = assetUrl('Centaur.png');
+  // angularLogoUrl = assetUrl('angular-logo.svg');
+  // chessLogoUrl = assetUrl('Centaur.png');
 
   emitQuickStartGame(): void {
     this.chessStarterService.quickStartGame.emit();

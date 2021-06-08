@@ -1,6 +1,7 @@
 
 #chessBoardBackground {
-  background-image: url("http://localhost:5005/assets/board-background.png");
+  background-image: url("https://polyglot-spa.github.io/angular-chess/angular-chess/assets/board-background.png");
+  /*background-image: url("http://localhost:5005/assets/board-background.png");*/
 }
 
 #chessBoardAngular {

@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:single-spa:angular-chess": "ng build angular-chess --prod --deploy-url http://localhost:5005/",
-    "serve:single-spa:angular-chess": "ng s --project angular-chess --disable-host-check --port 5005 --deploy-url http://localhost:5005/ --live-reload false"
+    "serve:single-spa:angular-chess": "ng s --project angular-chess --disable-host-check --port 5005 --deploy-url http://localhost:5005/ --live-reload false",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "private": true,
   "dependencies": {
@@ -41,6 +42,7 @@
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
+    "gh-pages": "^3.2.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~6.1.0",
@@ -57,5 +59,10 @@
     "type": "git",
     "url": "https://github.com/polyglot-spa/angular-chess.git"
   },
-  "keywords": ["angular", "custom elements", "micro-front end", "ng-bootstrap"]
+  "keywords": [
+    "angular",
+    "custom elements",
+    "micro-front end",
+    "ng-bootstrap"
+  ]
 }
