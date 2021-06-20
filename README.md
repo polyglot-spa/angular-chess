@@ -4,7 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:5005/`. The app will automatically reload if you change any of the source files.
+The main script is served from http://localhost:5005/main.js
+
+## Production server
+The micro-frontend is deployed using AWS and is served from "https://polyglot-spa-angular-chess.s3.us-east-2.amazonaws.com/dist/angular-chess/main.js"
 
 ## Code scaffolding
 
