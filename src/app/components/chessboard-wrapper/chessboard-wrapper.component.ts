@@ -60,7 +60,7 @@ export class ChessboardWrapperComponent implements OnInit {
   makeRandomMove(game): void {
     const possibleMoves = game.moves();
     // game over
-    if (possibleMoves.length === 0) {
+    if (!game.game_over() && possibleMoves.length === 0) {
       // @ts-ignore
       clearInterval(this.randomMoveInterval);
       return;
